@@ -1,24 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pJ5-xf-hrV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieEverisSeminario" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundSolidBlue" translatesAutoresizingMaskIntoConstraints="NO" id="Wr0-yz-FWS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="746.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wr0-yz-FWS" secondAttribute="height" multiplier="375:676" id="ZyO-5B-BFg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovilEveris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWH-d2-DsB">
+                                <rect key="frame" x="137.5" y="398.5" width="139.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                <color key="textColor" name="white"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NWH-d2-DsB" firstAttribute="centerY" secondItem="Wr0-yz-FWS" secondAttribute="centerY" constant="40" id="RAo-YA-Od8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wr0-yz-FWS" secondAttribute="trailing" id="TcR-WF-kQC"/>
+                            <constraint firstItem="Wr0-yz-FWS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="500" id="Xmn-y9-5Nx"/>
+                            <constraint firstItem="Wr0-yz-FWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c6N-RX-kn1"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wr0-yz-FWS" secondAttribute="bottom" constant="120" id="iSt-pz-aCU"/>
+                            <constraint firstItem="NWH-d2-DsB" firstAttribute="centerX" secondItem="Wr0-yz-FWS" secondAttribute="centerX" id="xp4-rU-mKh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="67.633928571428569"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="QEe-IJ-lHr">
+            <objects>
+                <viewController id="pJ5-xf-hrV" customClass="HomeViewController" customModule="MovieEverisSeminario" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mLG-Dd-wWL" customClass="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7BZ-mX-pdL">
+                                <rect key="frame" x="30" y="79" width="174" height="49.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-VB-g3x">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="29.5"/>
+                                        <string key="text">Estás viendo...
+</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tendencia del dia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-5y-IST">
+                                        <rect key="frame" x="0.0" y="29.5" width="174" height="20"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <color key="textColor" name="TextColorDescription"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-JF-A6P" customClass="UIViewCustom" customModule="MovieEverisSeminario" customModuleProvider="target">
+                                <rect key="frame" x="350" y="84" width="40" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pfofilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-HJ-4KS">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="Jyc-HJ-4KS" firstAttribute="leading" secondItem="eJq-JF-A6P" secondAttribute="leading" id="49C-oX-iyf"/>
+                                    <constraint firstItem="Jyc-HJ-4KS" firstAttribute="top" secondItem="eJq-JF-A6P" secondAttribute="top" id="7IL-xO-sZf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jyc-HJ-4KS" secondAttribute="bottom" id="Y13-kv-OvL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jyc-HJ-4KS" secondAttribute="trailing" id="vBW-Z8-Z0H"/>
+                                    <constraint firstAttribute="height" constant="40" id="w5Y-sw-DbV"/>
+                                    <constraint firstAttribute="width" constant="40" id="xpb-4H-hfm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="atCircle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Ov-YV-Hmb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7BZ-mX-pdL" firstAttribute="top" secondItem="2Ov-YV-Hmb" secondAttribute="top" constant="35" id="8cs-zw-qr0"/>
+                            <constraint firstItem="2Ov-YV-Hmb" firstAttribute="trailing" secondItem="eJq-JF-A6P" secondAttribute="trailing" constant="24" id="Rav-Is-aXu"/>
+                            <constraint firstItem="eJq-JF-A6P" firstAttribute="centerY" secondItem="7BZ-mX-pdL" secondAttribute="centerY" id="UQA-o2-ZDm"/>
+                            <constraint firstItem="eJq-JF-A6P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7BZ-mX-pdL" secondAttribute="trailing" constant="10" id="VeY-4U-kqe"/>
+                            <constraint firstItem="7BZ-mX-pdL" firstAttribute="leading" secondItem="2Ov-YV-Hmb" secondAttribute="leading" constant="30" id="yKo-ja-lu3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7q-GQ-c2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724.63768115942037" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundSolidBlue" width="375" height="676"/>
+        <image name="pfofilePhoto" width="90.5" height="131"/>
+        <namedColor name="TextColor">
+            <color red="0.082352941176470587" green="0.086274509803921567" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColorDescription">
+            <color red="0.52549019607843139" green="0.55686274509803924" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

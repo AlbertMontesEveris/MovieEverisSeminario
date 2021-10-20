@@ -19,6 +19,12 @@
 		9A3BAA2C271F0D8900EC30F3 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BAA26271F0D8900EC30F3 /* Montserrat-Medium.otf */; };
 		9A3BAA2D271F0D8900EC30F3 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BAA27271F0D8900EC30F3 /* Montserrat-Bold.otf */; };
 		9A3BAA2E271F0D8900EC30F3 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BAA28271F0D8900EC30F3 /* Montserrat-Light.otf */; };
+		9A3BAA3527206D3500EC30F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BAA3327206D3500EC30F3 /* HomeViewController.swift */; };
+		9AECD66227207AD40017BD4C /* UIViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66127207AD40017BD4C /* UIViewCustom.swift */; };
+		9AECD66527208C230017BD4C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66427208C220017BD4C /* HomePresenter.swift */; };
+		9AECD66827208DED0017BD4C /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66727208DED0017BD4C /* HomeConfigurator.swift */; };
+		9AECD66B2720B0E80017BD4C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66A2720B0E80017BD4C /* HomeRouter.swift */; };
+		9AECD66E2720B2950017BD4C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66D2720B2950017BD4C /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		9A3BAA26271F0D8900EC30F3 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		9A3BAA27271F0D8900EC30F3 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		9A3BAA28271F0D8900EC30F3 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		9A3BAA3327206D3500EC30F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9AECD66127207AD40017BD4C /* UIViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCustom.swift; sourceTree = "<group>"; };
+		9AECD66427208C220017BD4C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		9AECD66727208DED0017BD4C /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		9AECD66A2720B0E80017BD4C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		9AECD66D2720B2950017BD4C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,8 @@
 		9A3BAA0D271E23A900EC30F3 /* MovieEverisSeminario */ = {
 			isa = PBXGroup;
 			children = (
+				9AECD66027207A950017BD4C /* UiHelper */,
+				9A3BAA3027206C6C00EC30F3 /* Modules */,
 				9A3BAA22271F0D4100EC30F3 /* Resources */,
 				9A3BAA0E271E23A900EC30F3 /* AppDelegate.swift */,
 				9A3BAA10271E23A900EC30F3 /* SceneDelegate.swift */,
@@ -91,6 +105,74 @@
 				9A3BAA24271F0D8900EC30F3 /* Montserrat-SemiBold.otf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A3BAA3027206C6C00EC30F3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BAA3127206C8400EC30F3 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9A3BAA3127206C8400EC30F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66C2720B2820017BD4C /* Interactor */,
+				9AECD6692720B0CA0017BD4C /* Router */,
+				9AECD66627208DC70017BD4C /* Configurator */,
+				9AECD66327208BF90017BD4C /* Presenter */,
+				9A3BAA3227206D0F00EC30F3 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9A3BAA3227206D0F00EC30F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BAA3327206D3500EC30F3 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AECD66027207A950017BD4C /* UiHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66127207AD40017BD4C /* UIViewCustom.swift */,
+			);
+			path = UiHelper;
+			sourceTree = "<group>";
+		};
+		9AECD66327208BF90017BD4C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66427208C220017BD4C /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9AECD66627208DC70017BD4C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66727208DED0017BD4C /* HomeConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9AECD6692720B0CA0017BD4C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66A2720B0E80017BD4C /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9AECD66C2720B2820017BD4C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD66D2720B2950017BD4C /* HomeInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +255,12 @@
 				9A3BAA13271E23A900EC30F3 /* ViewController.swift in Sources */,
 				9A3BAA0F271E23A900EC30F3 /* AppDelegate.swift in Sources */,
 				9A3BAA11271E23A900EC30F3 /* SceneDelegate.swift in Sources */,
+				9AECD66527208C230017BD4C /* HomePresenter.swift in Sources */,
+				9AECD66827208DED0017BD4C /* HomeConfigurator.swift in Sources */,
+				9AECD66B2720B0E80017BD4C /* HomeRouter.swift in Sources */,
+				9AECD66E2720B2950017BD4C /* HomeInteractor.swift in Sources */,
+				9A3BAA3527206D3500EC30F3 /* HomeViewController.swift in Sources */,
+				9AECD66227207AD40017BD4C /* UIViewCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
