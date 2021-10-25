@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -85,7 +86,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-JF-A6P" customClass="UIViewCustom" customModule="MovieEverisSeminario" customModuleProvider="target">
                                 <rect key="frame" x="350" y="84" width="40" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pfofilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-HJ-4KS">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-HJ-4KS">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -103,17 +104,82 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="atCircle" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eaw-vP-i9f">
+                                <rect key="frame" x="0.0" y="158.5" width="414" height="350"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="t0C-1Z-jrG"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="30" id="XjG-r4-mzd">
+                                    <size key="itemSize" width="240" height="350"/>
+                                    <size key="estimatedItemSize" width="241" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TendeciaMovieCollectionViewCell" id="qCy-6y-qxH" customClass="TendeciaMovieCollectionViewCell" customModule="MovieEverisSeminario">
+                                        <rect key="frame" x="30" y="0.0" width="240" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ryU-JZ-ZRn" customClass="TendeciaMovieCollectionViewCell" customModule="MovieEverisSeminario" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-Wl-pbt" customClass="UIViewCustom" customModule="MovieEverisSeminario" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="350"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="jUJ-sk-ezW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="350"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="jUJ-sk-ezW" firstAttribute="leading" secondItem="Puh-Wl-pbt" secondAttribute="leading" id="CEC-ib-jo9"/>
+                                                        <constraint firstItem="jUJ-sk-ezW" firstAttribute="top" secondItem="Puh-Wl-pbt" secondAttribute="top" id="PTH-v0-ROT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jUJ-sk-ezW" secondAttribute="bottom" id="k6c-sg-D9R"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jUJ-sk-ezW" secondAttribute="trailing" id="qFd-ej-6rp"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Puh-Wl-pbt" secondAttribute="trailing" id="6X9-0R-8Ac"/>
+                                                <constraint firstItem="Puh-Wl-pbt" firstAttribute="leading" secondItem="ryU-JZ-ZRn" secondAttribute="leading" id="BjM-6k-b58"/>
+                                                <constraint firstItem="Puh-Wl-pbt" firstAttribute="top" secondItem="ryU-JZ-ZRn" secondAttribute="top" id="iVa-01-b6B"/>
+                                                <constraint firstAttribute="bottom" secondItem="Puh-Wl-pbt" secondAttribute="bottom" id="w0v-YR-mO0"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="240" height="350"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="pJ5-xf-hrV" id="WRM-mO-gHN"/>
+                                    <outlet property="delegate" destination="pJ5-xf-hrV" id="RCa-e9-PmW"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Ov-YV-Hmb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Eaw-vP-i9f" firstAttribute="top" secondItem="7BZ-mX-pdL" secondAttribute="bottom" constant="30" id="08d-ZD-HND"/>
                             <constraint firstItem="7BZ-mX-pdL" firstAttribute="top" secondItem="2Ov-YV-Hmb" secondAttribute="top" constant="35" id="8cs-zw-qr0"/>
                             <constraint firstItem="2Ov-YV-Hmb" firstAttribute="trailing" secondItem="eJq-JF-A6P" secondAttribute="trailing" constant="24" id="Rav-Is-aXu"/>
+                            <constraint firstItem="Eaw-vP-i9f" firstAttribute="leading" secondItem="2Ov-YV-Hmb" secondAttribute="leading" id="SRi-x3-vRL"/>
                             <constraint firstItem="eJq-JF-A6P" firstAttribute="centerY" secondItem="7BZ-mX-pdL" secondAttribute="centerY" id="UQA-o2-ZDm"/>
                             <constraint firstItem="eJq-JF-A6P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7BZ-mX-pdL" secondAttribute="trailing" constant="10" id="VeY-4U-kqe"/>
+                            <constraint firstItem="2Ov-YV-Hmb" firstAttribute="trailing" secondItem="Eaw-vP-i9f" secondAttribute="trailing" id="sI3-Vz-s9s"/>
                             <constraint firstItem="7BZ-mX-pdL" firstAttribute="leading" secondItem="2Ov-YV-Hmb" secondAttribute="leading" constant="30" id="yKo-ja-lu3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="Eaw-vP-i9f" id="mXA-jb-AwW"/>
+                        <outlet property="profileImageView" destination="Jyc-HJ-4KS" id="NeL-WK-yQR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7q-GQ-c2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,8 +187,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Placeholder" width="240" height="348"/>
         <image name="backgroundSolidBlue" width="375" height="676"/>
-        <image name="pfofilePhoto" width="90.5" height="131"/>
         <namedColor name="TextColor">
             <color red="0.082352941176470587" green="0.086274509803921567" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

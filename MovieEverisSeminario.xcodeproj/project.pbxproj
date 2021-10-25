@@ -25,9 +25,14 @@
 		9AECD66827208DED0017BD4C /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66727208DED0017BD4C /* HomeConfigurator.swift */; };
 		9AECD66B2720B0E80017BD4C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66A2720B0E80017BD4C /* HomeRouter.swift */; };
 		9AECD66E2720B2950017BD4C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD66D2720B2950017BD4C /* HomeInteractor.swift */; };
+		9AECD6712720E1C40017BD4C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD6702720E1C40017BD4C /* Movie.swift */; };
+		9AECD6742720E8EF0017BD4C /* TendeciaMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECD6732720E8EF0017BD4C /* TendeciaMovieCollectionViewCell.swift */; };
+		A19FFC2E8763BE9B588F829A /* Pods_MovieEverisSeminario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB024CCAEBA2030B630AD95C /* Pods_MovieEverisSeminario.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58F5CEBA5DEE4297AE89D6EB /* Pods-MovieEverisSeminario.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieEverisSeminario.debug.xcconfig"; path = "Target Support Files/Pods-MovieEverisSeminario/Pods-MovieEverisSeminario.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD6F6571AB0E18D57E5AE02 /* Pods-MovieEverisSeminario.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieEverisSeminario.release.xcconfig"; path = "Target Support Files/Pods-MovieEverisSeminario/Pods-MovieEverisSeminario.release.xcconfig"; sourceTree = "<group>"; };
 		9A3BAA0B271E23A900EC30F3 /* MovieEverisSeminario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieEverisSeminario.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3BAA0E271E23A900EC30F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A3BAA10271E23A900EC30F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,9 @@
 		9AECD66727208DED0017BD4C /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		9AECD66A2720B0E80017BD4C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		9AECD66D2720B2950017BD4C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		9AECD6702720E1C40017BD4C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9AECD6732720E8EF0017BD4C /* TendeciaMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendeciaMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB024CCAEBA2030B630AD95C /* Pods_MovieEverisSeminario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieEverisSeminario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19FFC2E8763BE9B588F829A /* Pods_MovieEverisSeminario.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66D65333EAF843A0D9A7E6C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58F5CEBA5DEE4297AE89D6EB /* Pods-MovieEverisSeminario.debug.xcconfig */,
+				6CD6F6571AB0E18D57E5AE02 /* Pods-MovieEverisSeminario.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9A3BAA02271E23A900EC30F3 = {
 			isa = PBXGroup;
 			children = (
 				9A3BAA0D271E23A900EC30F3 /* MovieEverisSeminario */,
 				9A3BAA0C271E23A900EC30F3 /* Products */,
+				66D65333EAF843A0D9A7E6C9 /* Pods */,
+				AAB4816C1EFEC298C57B395B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +139,7 @@
 		9A3BAA3127206C8400EC30F3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9AECD66F2720E1AB0017BD4C /* Entity */,
 				9AECD66C2720B2820017BD4C /* Interactor */,
 				9AECD6692720B0CA0017BD4C /* Router */,
 				9AECD66627208DC70017BD4C /* Configurator */,
@@ -130,6 +152,7 @@
 		9A3BAA3227206D0F00EC30F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9AECD6722720E8C20017BD4C /* Cell */,
 				9A3BAA3327206D3500EC30F3 /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -175,6 +198,30 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		9AECD66F2720E1AB0017BD4C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD6702720E1C40017BD4C /* Movie.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9AECD6722720E8C20017BD4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9AECD6732720E8EF0017BD4C /* TendeciaMovieCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AAB4816C1EFEC298C57B395B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB024CCAEBA2030B630AD95C /* Pods_MovieEverisSeminario.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A3BAA1F271E23AC00EC30F3 /* Build configuration list for PBXNativeTarget "MovieEverisSeminario" */;
 			buildPhases = (
+				A69A9C27C40D99410E6794B7 /* [CP] Check Pods Manifest.lock */,
 				9A3BAA07271E23A900EC30F3 /* Sources */,
 				9A3BAA08271E23A900EC30F3 /* Frameworks */,
 				9A3BAA09271E23A900EC30F3 /* Resources */,
+				78C7CC941BEE0F1B850B61C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,15 +296,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78C7CC941BEE0F1B850B61C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieEverisSeminario/Pods-MovieEverisSeminario-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieEverisSeminario/Pods-MovieEverisSeminario-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieEverisSeminario/Pods-MovieEverisSeminario-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69A9C27C40D99410E6794B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieEverisSeminario-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9A3BAA07271E23A900EC30F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9A3BAA13271E23A900EC30F3 /* ViewController.swift in Sources */,
+				9AECD6742720E8EF0017BD4C /* TendeciaMovieCollectionViewCell.swift in Sources */,
 				9A3BAA0F271E23A900EC30F3 /* AppDelegate.swift in Sources */,
 				9A3BAA11271E23A900EC30F3 /* SceneDelegate.swift in Sources */,
 				9AECD66527208C230017BD4C /* HomePresenter.swift in Sources */,
+				9AECD6712720E1C40017BD4C /* Movie.swift in Sources */,
 				9AECD66827208DED0017BD4C /* HomeConfigurator.swift in Sources */,
 				9AECD66B2720B0E80017BD4C /* HomeRouter.swift in Sources */,
 				9AECD66E2720B2950017BD4C /* HomeInteractor.swift in Sources */,
@@ -404,6 +497,7 @@
 		};
 		9A3BAA20271E23AC00EC30F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58F5CEBA5DEE4297AE89D6EB /* Pods-MovieEverisSeminario.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -434,6 +528,7 @@
 		};
 		9A3BAA21271E23AC00EC30F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD6F6571AB0E18D57E5AE02 /* Pods-MovieEverisSeminario.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
